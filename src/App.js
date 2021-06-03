@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Header from "./lib/components/Header";
+import Menubar from "./lib/components/Menubar";
+import Sidebar from "./lib/components/Sidebar";
+import Community from "./lib/pages/Community";
+import Donate from "./lib/pages/Donate";
+import Home from "./lib/pages/Home";
 
 function App() {
+  const [page, setPage] = useState(1);
+  const [showSidebar, setShowSidebar] = useState(false);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header showSidebar={() => setShowSidebar(true)} />
+      <Sidebar show={showSidebar} hide={() => setShowSidebar(false)} />
+      {page === 0 && <Donate />}
+      {page === 1 && <Home />}
+      {page === 2 && <Community />}
+      <Menubar page={page} setPage={setPage} />
     </div>
   );
 }
