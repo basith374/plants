@@ -7,6 +7,7 @@ const Container = styled.div`
 
 const Title = styled.div`
   margin-bottom: 2em;
+  font-weight: 600;
 `
 
 export default function Plants() {

@@ -12,7 +12,7 @@ const Head = styled.div`
 
 const Title = styled.div`
   flex: 1;
-  font-size: 15px;
+  font-weight: 600;
 `;
 
 const More = styled.div`
