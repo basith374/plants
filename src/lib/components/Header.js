@@ -88,7 +88,7 @@ export default function Header({ showSidebar }) {
       </Middle>
       <Button>
         <Profile>
-          <img src="/profile.png" alt="Profile" />
+          <img src="http://assets.basithkunimal.com/profile.png" alt="Profile" />
         </Profile>
       </Button>
     </Container>

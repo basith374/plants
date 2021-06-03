@@ -14,9 +14,9 @@ export default function Plants() {
   return <Container>
     <Title>Plants near you</Title>
     <div>
-      <Item image="/plant1.png" />
-      <Item image="/plant2.png" />
-      <Item image="/plant3.png" />
+      <Item image="http://assets.basithkunimal.com/plant1.png" />
+      <Item image="http://assets.basithkunimal.com/plant2.png" />
+      <Item image="http://assets.basithkunimal.com/plant3.png" />
     </div>
   </Container>
 }
