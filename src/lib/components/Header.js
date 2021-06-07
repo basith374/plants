@@ -15,8 +15,7 @@ function HamburgerIcon() {
         width="23"
         height="6"
         rx="3"
-        fill="black"
-        fill-opacity="0.5"
+        fill="#888"
       />
       <rect
         x="9"
@@ -24,16 +23,14 @@ function HamburgerIcon() {
         width="23"
         height="6"
         rx="3"
-        fill="black"
-        fill-opacity="0.5"
+        fill="#888"
       />
       <rect
         y="11"
         width="41"
         height="6"
         rx="3"
-        fill="black"
-        fill-opacity="0.5"
+        fill="#888"
       />
     </svg>
   );

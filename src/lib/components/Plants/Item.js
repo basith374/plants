@@ -6,6 +6,7 @@ const Container = styled.div`
   display: flex;
   border-radius: 8px;
   overflow: hidden;
+  cursor: pointer;
 `;
 
 const Image = styled.div`
@@ -60,9 +61,9 @@ const TextSection = styled.div`
   margin-bottom: 1em;
 `
 
-export default function Item({ image }) {
+export default function Item({ image, onClick }) {
   return (
-    <Container>
+    <Container onClick={onClick}>
       <Image>
         <img src={image} alt="preview" />
       </Image>

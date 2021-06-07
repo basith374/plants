@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 import Button from "./Button";
 import Cacti from "./categories/cacti";
@@ -23,13 +24,21 @@ const More = styled.div`
 
 const Buttons = styled.div`
   display: flex;
-`
+`;
 
 const Container = styled.div`
   padding: 3em 0 0;
-`
+`;
+
+const items = {
+  Succulents: Succulents,
+  Creepers: Creeper,
+  Orchid: Orchid,
+  Cacti: Cacti,
+};
 
 export default function Categories() {
+  const [selected, setSelected] = useState("Succulents");
   return (
     <Container>
       <Head>
@@ -37,18 +46,11 @@ export default function Categories() {
         <More>See more</More>
       </Head>
       <Buttons>
-        <Button title="Succulents" active>
-            <Succulents />
-        </Button>
-        <Button title="Creepers">
-            <Creeper />
-        </Button>
-        <Button title="Orchid">
-            <Orchid />
-        </Button>
-        <Button title="Cacti">
-            <Cacti />
-        </Button>
+        {Object.entries(items).map(([k, C]) => (
+          <Button key={k} title={k} active={k === selected} onClick={() => setSelected(k)}>
+            <C active={k === selected} />
+          </Button>
+        ))}
       </Buttons>
     </Container>
   );

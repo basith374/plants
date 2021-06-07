@@ -22,11 +22,12 @@ const Container = styled.div`
   flex: 1;
   text-align: center;
   padding: 10px;
+  cursor: pointer;
 `
 
-export default function Button({ children, title, active }) {
+export default function Button({ children, title, active, onClick }) {
   return (
-    <Container>
+    <Container onClick={onClick}>
       <Image active={active}>{children}</Image>
       <Text>{title}</Text>
     </Container>
