@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { Container, Input } from "./Input";
 
 function SearchIcon() {
   return (
@@ -10,25 +10,6 @@ function SearchIcon() {
     </svg>
   );
 }
-
-const Container = styled.div`
-  background: #fff;
-  border-radius: 22.5px;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  svg {
-    margin-top: 2px;
-  }
-`;
-
-const Input = styled.input`
-  border: none;
-  padding: 0 1em;
-  line-height: 25px;
-  flex: 1;
-  outline: none;
-`;
 
 export default function Searchbar({ placeholder }) {
   return (

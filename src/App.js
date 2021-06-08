@@ -7,12 +7,26 @@ import Community from "./lib/pages/Community";
 import Donate from "./lib/pages/Donate";
 import Home from "./lib/pages/Home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ViewPlant from "./lib/components/ViewPlant";
+
+function MainTab() {
+  return (
+    <Switch>
+      <Route path="/plant">
+        <ViewPlant />
+      </Route>
+      <Route path="/">
+        <Home />
+      </Route>
+    </Switch>
+  );
+}
 
 function Content({ page }) {
   return (
     <>
       {page === 0 && <Donate />}
-      {page === 1 && <Home />}
+      {page === 1 && <MainTab />}
       {page === 2 && <Community />}
     </>
   );
@@ -26,14 +40,7 @@ function App() {
       <Header showSidebar={() => setShowSidebar(true)} />
       <Sidebar show={showSidebar} hide={() => setShowSidebar(false)} />
       <Router>
-        <Switch>
-          <Route path="/plant">
-            
-          </Route>
-          <Route path="/">
-            <Content page={page} />
-          </Route>
-        </Switch>
+        <Content page={page} />
       </Router>
       <Menubar page={page} setPage={setPage} />
     </div>

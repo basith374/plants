@@ -32,7 +32,7 @@ function DirectionsIcon() {
 const Button = styled.button`
   background: #d9eceb;
   border: none;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   border-radius: 6px;
   font-size: 13px;
   svg {
@@ -44,22 +44,38 @@ const Title = styled.div`
   font-size: 15px;
   margin-bottom: 5px;
   font-weight: 600;
-`
+`;
 
 const Text = styled.div`
   color: #777;
   font-size: 12px;
-`
+`;
 
 const Content = styled.div`
   flex: 1;
   padding: 1em;
   background: #fff;
-`
+`;
 
 const TextSection = styled.div`
   margin-bottom: 1em;
-`
+`;
+
+export function PlantText() {
+  return (
+    <>
+      <TextSection>
+        <Title>Sector 2, HSR Layout</Title>
+        <Text>15 years old</Text>
+      </TextSection>
+      <div>
+        <Button>
+          <DirectionsIcon /> Directions
+        </Button>
+      </div>
+    </>
+  );
+}
 
 export default function Item({ image, onClick }) {
   return (

@@ -19,7 +19,7 @@ code {
   box-sizing: border-box;
 }
 
-body, button, input {
+body, button, input, textarea {
   font-family: Raleway;
 }
 
