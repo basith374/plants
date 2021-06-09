@@ -27,7 +27,7 @@ const posts = [
 
 export default function Community() {
   return (
-    <Layout>
+    <Layout animate={{ y: 0 }} initial={{ y: 10 }}>
       <Section>
         <Searchbar placeholder="Search for questions" />
       </Section>

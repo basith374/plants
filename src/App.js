@@ -8,17 +8,20 @@ import Donate from "./lib/pages/Donate";
 import Home from "./lib/pages/Home";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ViewPlant from "./lib/components/ViewPlant";
+import { AnimateSharedLayout } from "framer-motion";
 
 function MainTab() {
   return (
-    <Switch>
-      <Route path="/plant">
-        <ViewPlant />
-      </Route>
-      <Route path="/">
-        <Home />
-      </Route>
-    </Switch>
+    <AnimateSharedLayout type="crossfade">
+      <Switch>
+        <Route path="/plant/:id">
+          <ViewPlant />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </AnimateSharedLayout>
   );
 }
 

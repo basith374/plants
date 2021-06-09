@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -77,11 +78,16 @@ export function PlantText() {
   );
 }
 
-export default function Item({ image, onClick }) {
+export default function Item({ image, onClick, id }) {
   return (
     <Container onClick={onClick}>
       <Image>
-        <img src={image} alt="preview" />
+        <motion.img
+          src={image}
+          alt="preview"
+          layoutId={id}
+          transition={{ duration: 0.2 }}
+        />
       </Image>
       <Content>
         <TextSection>

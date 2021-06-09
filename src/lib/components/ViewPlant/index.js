@@ -1,9 +1,11 @@
+import { motion } from "framer-motion";
+import { useParams } from "react-router";
 import styled from "styled-components";
 import { PlantText } from "../Plants/Item";
 import UserInfo from "../UserInfo";
 import Reply from "./Reply";
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   overflow-y: scroll;
   padding-bottom: 5em;
   border-radius: 2em 2em 0 0;
@@ -20,7 +22,7 @@ const ImageContainer = styled.div`
 
 const TextSection = styled.div`
   padding: 2em;
-  background: #F5F5F5;
+  background: #f5f5f5;
 `;
 
 const Section = styled.div`
@@ -33,10 +35,16 @@ const Text = styled.div`
 `;
 
 export default function ViewPlant() {
+  const { id } = useParams();
   return (
     <Container>
       <ImageContainer>
-        <img src="http://assets.basithkunimal.com/plant3.png" alt="plant" />
+        <motion.img
+          src={`http://assets.basithkunimal.com/plant${parseInt(id) + 1}.png`}
+          alt="plant"
+          transition={{ duration: 0.2 }}
+          layoutId={id}
+        />
       </ImageContainer>
       <TextSection>
         <Section more>

@@ -23,8 +23,13 @@ export default function Plants() {
     <Container>
       <Title>Plants near you</Title>
       <div>
-        {items.map((i) => (
-          <Item key={i} image={i} onClick={() => history.push("/plant")} />
+        {items.map((i, idx) => (
+          <Item
+            key={i}
+            image={i}
+            onClick={() => history.push("/plant/" + idx)}
+            id={idx.toString()}
+          />
         ))}
       </div>
     </Container>

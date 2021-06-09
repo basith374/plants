@@ -43,7 +43,7 @@ const Button = styled.button`
 
 export default function Donate() {
   return (
-    <Layout>
+    <Layout animate={{ y: 0 }} initial={{ y: 10 }}>
       <Input placeholder="Upload Image">
         <Upload />
       </Input>

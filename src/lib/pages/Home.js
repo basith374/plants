@@ -1,9 +1,10 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import Categories from "../components/Categories";
 import Plants from "../components/Plants";
 import Searchbar from "../components/Searchbar";
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   background: #f5f5f5;
   flex: 1;
   padding: 2em 0;
@@ -33,7 +34,7 @@ const Padding = styled.div`
 
 export default function Home() {
   return (
-    <Container>
+    <Container animate={{ y: 0 }} initial={{ y: 10 }}>
       <Padding>
         <Searchbar placeholder="Search plants to adopt" />
       </Padding>

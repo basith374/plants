@@ -9,6 +9,7 @@ const Image = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 200ms background linear;
   svg {
     width: 24px;
   }
