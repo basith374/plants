@@ -17,7 +17,7 @@ function Location() {
 function Upload() {
   return (
     <svg width="16" viewBox="0 0 38 38">
-      <g clip-path="url(#clip2)">
+      <g>
         <path
           d="M7.91666 17.4167C9.66308 17.4167 11.0833 15.9965 11.0833 14.25C11.0833 12.5036 9.66308 11.0834 7.91666 11.0834C6.17025 11.0834 4.75 12.5036 4.75 14.25C4.75 15.9965 6.17025 17.4167 7.91666 17.4167Z"
           fill="#aaa"
@@ -27,11 +27,6 @@ function Upload() {
           fill="#aaa"
         />
       </g>
-      <defs>
-        <clipPath id="clip2">
-          <rect width="38" height="38" fill="white" />
-        </clipPath>
-      </defs>
     </svg>
   );
 }
